@@ -1,0 +1,15 @@
+import { Layer } from 'src/layers/types'
+
+export const binary: Layer<string, number> = {
+  name: 'Binary parse',
+  acceptsInput: (value) => {
+    if (typeof value !== 'string') {
+      return false
+    }
+
+    return /^[01]+$/.test(value)
+  },
+  parse: (value) => {
+    return parseInt(value, 2)
+  },
+}
