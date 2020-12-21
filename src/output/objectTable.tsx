@@ -9,7 +9,7 @@ export const objectTable: Output<any> = {
   render: (value) => (
     <table>
       <colgroup>
-        <col style={{width: 'fit-content'}} />
+        <col style={{width: '100px'}} />
         <col style={{width: 'fit-content'}} />
         <col />
       </colgroup>
@@ -17,7 +17,7 @@ export const objectTable: Output<any> = {
         {Object.entries(value).map(([key, value]) => (
           <tr>
             <th>{key}</th>
-            <td><TypeSymbol value={value} /></td>
+            <td style={{ lineBreak: 'auto' }}><TypeSymbol value={value} /></td>
             <td><Print value={value} /></td>
           </tr>
         ))}

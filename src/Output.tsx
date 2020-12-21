@@ -4,7 +4,7 @@ import { Output as OutputType } from 'src/output/types'
 
 export const Output = ({ value }: { value: unknown }) => {
   const [outputs, setOutputs] = useState<OutputType<any>[]>([])
-  const [currentOutput, setCurrentOutputs] = useState<number>(0)
+  const [currentOutput] = useState<number>(0)
 
   useEffect(() => {
     setOutputs(allOutputs.filter(output => output.acceptsValue(value)))

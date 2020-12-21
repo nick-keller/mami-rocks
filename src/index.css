@@ -53,6 +53,7 @@ td, th {
   padding: 6px 13px;
   border: solid 1px rgb(59, 67, 75);
   text-align: left;
+  line-break: anywhere;
 }
 
 tr:nth-child(2n) {

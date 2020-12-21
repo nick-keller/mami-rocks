@@ -1,5 +1,6 @@
 import { getType } from 'src/utils'
 import ReactJson from 'react-json-view'
+import nl2br from 'react-newline-to-break'
 
 const numberFormat = new Intl.NumberFormat('en-US', { maximumFractionDigits: 10 })
 
@@ -7,7 +8,7 @@ export const Print = ({ value }: { value: any }) => {
   const type = getType(value)
 
   if (type === 'string') {
-    return value
+    return nl2br(value)
   }
 
   if (type === 'number') {
