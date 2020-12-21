@@ -7,7 +7,7 @@ export const uri: Layer<string, string> = {
       return false
     }
 
-    return /%[0-9a-f]{2}/i.test(value)
+    return /%[0-9a-f]{2}/i.test(value) && decodeURI(value) !== value
   },
   parse: (value) => {
     return decodeURI(value)

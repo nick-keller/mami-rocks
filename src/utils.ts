@@ -23,6 +23,10 @@ export const getType = (value: unknown) => {
     return 'number'
   }
 
+  if (value instanceof Date) {
+    return 'date'
+  }
+
   if (Array.isArray(value)) {
     return 'array'
   }
@@ -43,5 +47,6 @@ export const typeToAbbr = {
   boolean: 'bool',
   array: 'arr',
   object: 'obj',
+  date: 'date',
   unknown: '?',
 }

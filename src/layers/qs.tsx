@@ -11,6 +11,6 @@ export const queryString: Layer<string, qs.ParsedQs> = {
     return /.=.+&.+=./.test(value)
   },
   parse: (value) => {
-    return qs.parse(value)
+    return qs.parse(value.replace(/^\?/, ''))
   },
 }

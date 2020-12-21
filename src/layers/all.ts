@@ -7,15 +7,17 @@ import { url } from 'src/layers/url'
 import { queryString } from 'src/layers/qs'
 import { uri } from 'src/layers/uri'
 import { jwt } from 'src/layers/jwt'
+import { date } from 'src/layers/date'
 
 export const allLayers = [
   binary,
   decimal,
   hex,
-  url,
-  queryString,
-  uri,
   base64,
   jwt,
   json,
+  url,
+  queryString,
+  uri,
+  date,
 ]

@@ -16,7 +16,10 @@ export const url: Layer<string, object> = {
 
     return Object.entries({
       ...parsed,
-      query: parsed.query && qs.parse(parsed.query.slice(1)),
+      queryParams: parsed.query && qs.parse(parsed.query.slice(1)),
+      port: parsed.port ? parseInt(parsed.port) : null,
+      pathname: parsed.pathname === '/' ? null : parsed.pathname,
+      hostname: parsed.hostname !== parsed.host ? parsed.hostname : null,
       slashes: null,
       href: null,
     }).filter(([_, v]) => v).reduce((acc, [k, v]) => {

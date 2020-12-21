@@ -45,6 +45,20 @@ textarea {
   padding: 15px;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 6px 13px;
+  border: solid 1px rgb(59, 67, 75);
+  text-align: left;
+}
+
+tr:nth-child(2n) {
+  background: #161C23;
+}
+
 #root > aside {
  padding: 20px;
 }
@@ -54,6 +68,7 @@ textarea {
   border-radius: 4px;
   margin-right: 5px;
   background: #161C23;
+  display: inline-block;
 }
 
 .tag.string {
@@ -84,6 +99,11 @@ textarea {
 .tag.null {
   background: #1c4222;
   color: #aac765;
+}
+
+.tag.date {
+  background: #451769;
+  color: #bf5aa5;
 }
 
 .string-output {
