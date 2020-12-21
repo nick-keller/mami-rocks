@@ -8,6 +8,7 @@ import { queryString } from 'src/layers/qs'
 import { uri } from 'src/layers/uri'
 import { jwt } from 'src/layers/jwt'
 import { date } from 'src/layers/date'
+import { csv } from 'src/layers/csv'
 
 export const allLayers = [
   binary,
@@ -20,4 +21,5 @@ export const allLayers = [
   queryString,
   uri,
   date,
+  csv,
 ]

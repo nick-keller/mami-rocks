@@ -4,7 +4,7 @@ import { Print } from 'src/Print'
 import { TypeSymbol } from 'src/TypeSymbol'
 
 export const objectTable: Output<any> = {
-  name: 'Object table',
+  name: 'Table',
   acceptsValue: (value) => getType(value) === 'object' && Object.keys(value as object).length > 0,
   render: (value) => (
     <table>

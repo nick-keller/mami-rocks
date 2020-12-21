@@ -6,8 +6,10 @@ import { boolean } from 'src/output/boolean'
 import { number } from 'src/output/number'
 import { date } from 'src/output/date'
 import { objectTable } from 'src/output/objectTable'
+import { arrayTable } from 'src/output/arrayTable'
 
 export const allOutputs: Output<any>[] = [
+  arrayTable,
   objectTable,
   json,
   undef,
