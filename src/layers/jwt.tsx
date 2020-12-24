@@ -9,10 +9,10 @@ export const jwt: Layer<string, unknown> = {
     }
 
     try {
-      return decode(value) !== null
+      return decode(value.replace(/\s+/g, '')) !== null
     } catch (error) {
       return false
     }
   },
-  parse: (value) => decode(value),
+  parse: (value) => decode(value.replace(/\s+/g, '')),
 }

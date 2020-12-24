@@ -7,9 +7,9 @@ export const decimal: Layer<string, number> = {
       return false
     }
 
-    return /^-?([0-9]+(\.[0-9]*)?|\.[0-9]+)$/.test(value)
+    return /^-?([0-9]+(\.[0-9]*)?|\.[0-9]+)$/.test(value.trim())
   },
   parse: (value) => {
-    return parseFloat(value)
+    return parseFloat(value.trim())
   },
 }

@@ -7,9 +7,9 @@ export const hex: Layer<string, number> = {
       return false
     }
 
-    return /^[0-9a-f]+$/i.test(value)
+    return /^[0-9a-f]+$/i.test(value.trim())
   },
   parse: (value) => {
-    return parseInt(value, 16)
+    return parseInt(value.trim(), 16)
   },
 }

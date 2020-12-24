@@ -7,9 +7,9 @@ export const binary: Layer<string, number> = {
       return false
     }
 
-    return /^[01]+$/.test(value)
+    return /^[01]+$/.test(value.trim())
   },
   parse: (value) => {
-    return parseInt(value, 2)
+    return parseInt(value.trim(), 2)
   },
 }

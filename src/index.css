@@ -34,6 +34,19 @@ code {
   padding: 20px;
 }
 
+.title {
+  padding: 20px 20px 0 20px;
+}
+
+.title h1 {
+  margin: 0;
+}
+
+.title h1 small {
+  margin-left: 20px;
+  font-size: 18px;
+}
+
 textarea {
   flex: 1;
   resize: none;

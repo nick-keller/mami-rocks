@@ -37,6 +37,12 @@ function App() {
 
   return (
     <>
+      <div className="title">
+        <h1>
+          {'{'} Mamie.rocks {'}'}
+          <small>The anything parser</small>
+        </h1>
+      </div>
       <main>
         <article>
           <textarea
